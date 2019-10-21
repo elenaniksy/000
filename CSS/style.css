@@ -8,8 +8,10 @@ html, body {
 }
 
 #main {
+    max-width: 100%;
     background: #F5F5F5;
     border-radius: .62em;
+    margin: 0;
     padding: 15px;
 }
 /*** Header ***/
@@ -31,22 +33,25 @@ html, body {
 
 /*** Image ***/
 #img-div {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
     background: white;
     line-height: 10px;
-
+    overflow: hidden;
 }
+
 #image {
-    max-width: 800px;
-    display: inline-block;
-    height: auto;
+    max-width: 100%;
     padding: 0 10px;
     margin: 0 10px;
 }
 #img-caption {
     display: inline-block;
-    max-width: 800px;
+    max-width: 100%;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: black;
     line-height: 2.1em;
     text-align: center;
@@ -106,7 +111,17 @@ li {
     font-size: 1.2rem;
     line-height: 2.1em;
     font-weight: 400;
-
 }
 
-
+@media (min-width: 320px) {
+    #img-caption {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+}
+@media (max-width: 576px) {
+    #img-caption {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+}
